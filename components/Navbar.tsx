@@ -1,0 +1,116 @@
+"use client";
+import React, { useState } from "react";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <nav className="bg-white shadow-2xs sticky top-0 z-50">
+      <div className="container mx-auto px-4 py-4">
+        <div className="flex justify-between items-center">
+          <Link
+            href="/"
+            className="font-serif text-2xl font-bold text-political-navy"
+          >
+            <Image
+              src="/foundation-logo.webp"
+              width={130}
+              height={0}
+              alt="logo"
+            />
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex space-x-8">
+            <a
+              href="#about"
+              className="text-gray-700 hover:text-political-navy font-medium"
+            >
+              About
+            </a>
+            <a
+              href="#issues"
+              className="text-gray-700 hover:text-political-navy font-medium"
+            >
+              Activities
+            </a>
+            <a
+              href="#get-involved"
+              className="text-gray-700 hover:text-political-navy font-medium"
+            >
+              Get Involved
+            </a>
+            <a
+              href="#news"
+              className="text-gray-700 hover:text-political-navy font-medium"
+            >
+              News
+            </a>
+          </div>
+
+          <div className="hidden md:block">
+            <Button className="btn-primary">Donate</Button>
+          </div>
+
+          {/* Mobile Navigation Button */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-700 focus:outline-none"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation Menu */}
+        {isOpen && (
+          <div className="md:hidden mt-4 pb-4 animate-fade-in">
+            <div className="flex flex-col space-y-4">
+              <a
+                href="#about"
+                className="text-gray-700 hover:text-political-navy font-medium"
+                onClick={toggleMenu}
+              >
+                About
+              </a>
+              <a
+                href="#issues"
+                className="text-gray-700 hover:text-political-navy font-medium"
+                onClick={toggleMenu}
+              >
+                Issues
+              </a>
+              <a
+                href="#get-involved"
+                className="text-gray-700 hover:text-political-navy font-medium"
+                onClick={toggleMenu}
+              >
+                Get Involved
+              </a>
+              <a
+                href="#news"
+                className="text-gray-700 hover:text-political-navy font-medium"
+                onClick={toggleMenu}
+              >
+                News
+              </a>
+              <Button className="btn-primary">Button</Button>
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
