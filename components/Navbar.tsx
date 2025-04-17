@@ -104,7 +104,7 @@ const Navbar = () => {
               >
                 News
               </a>
-              <Button className="btn-primary">Button</Button>
+              <Button className="btn-primary">Donate</Button>
             </div>
           </div>
         )}
