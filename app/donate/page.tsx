@@ -16,6 +16,8 @@ const Donate = () => {
     }
 
     try {
+      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
       const response = await fetch("/api/initiate-donation", {
         method: "POST",
         headers: {
@@ -24,11 +26,9 @@ const Donate = () => {
         body: JSON.stringify({
           totalAmount,
           description: "Donation to Abi Legacy Foundation",
-          callbackUrl: "http://localhost:3000/api/hubtel-callback",
-          returnUrl:
-            "http://localhost:3000 || https://abi-legacy-foundation.vercel.app/",
-          cancellationUrl:
-            "http://localhost:3000 || https://abi-legacy-foundation.vercel.app/",
+          callbackUrl: `${baseUrl}/api/hubtel-callback`,
+          returnUrl: `${baseUrl}/thank-you`,
+          cancellationUrl: `${baseUrl}/donate`,
           merchantAccountNumber: "11684",
           clientReference: `Abrantie-${Date.now()}`,
         }),
