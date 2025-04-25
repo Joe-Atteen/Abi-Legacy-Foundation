@@ -123,13 +123,34 @@ body {
     @apply bg-background text-foreground;
   }
 
+  .btn {
+    @apply !px-10 !py-6 !cursor-pointer;
+  }
   .btn-primary {
-    @apply !bg-[#0057a5] text-white uppercase hover:!bg-[#0047a5d2] cursor-pointer !p-5;
+    @apply !bg-[#0057a5] text-white uppercase hover:!bg-[#0047a5d2] cursor-pointer rounded-lg;
   }
 
   .text-primary {
     @apply !text-[#0057a5];
   }
+}
+
+@layer utilities {
+  .no-focus {
+    @apply focus-visible:ring-1 focus-visible:ring-[#0057a5] focus-visible:ring-offset-0;
+  }
+}
+
+/* Remove number input spinners for all browsers */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: textfield; /* Standard */
+  -moz-appearance: textfield; /* Firefox */
 }
 
 button span {
@@ -157,4 +178,13 @@ button span {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   background: hsla(0, 0%, 100%, 0.1);
+}
+
+.donate {
+  min-height: calc(100dvh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
 }
