@@ -27,7 +27,7 @@ const Donate = () => {
           totalAmount,
           description: "Donation to Abi Legacy Foundation",
           callbackUrl: `${baseUrl}/api/hubtel-callback`,
-          returnUrl: `${baseUrl}/thank-you`,
+          returnUrl: `${baseUrl}`,
           cancellationUrl: `${baseUrl}/donate`,
           merchantAccountNumber: "11684",
           clientReference: `Abrantie-${Date.now()}`,
