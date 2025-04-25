@@ -5,9 +5,7 @@ import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
 const Donate = () => {
-  const [checkoutUrl, setCheckoutUrl] = useState("");
   const [amount, setAmount] = useState("");
-  const [showCheckout, setShowCheckout] = useState(false);
 
   const handleContinue = async () => {
     const totalAmount = parseFloat(amount);
@@ -39,7 +37,7 @@ const Donate = () => {
       const data = await response.json();
 
       if (response.ok && data?.data?.checkoutUrl) {
-       window.location.href = data.data.checkoutUrl;
+        window.location.href = data.data.checkoutUrl;
       } else {
         toast.error("Failed to initiate donation.");
       }
@@ -55,38 +53,28 @@ const Donate = () => {
         The Abi Legacy Foundation depends on Partners and Donors like you to
         continue its outreach.
       </h1>
-      {!showCheckout ? (
-        <div className="max-w-[450px] mx-auto w-full">
-          <div className="glasscard p-5 rounded-md border border-gray-100 shadow-md">
-            <h2 className="text-xl font-bold text-center mb-8">
-              Enter Donation Amount
-            </h2>
-            <Input
-              type="number"
-              min="5"
-              placeholder="Enter amount (minimum GH₵5)"
-              value={amount}
-              onChange={(e) => setAmount(e.target.value)}
-              className="w-full appearance-none rounded-md px-4 py-6 text-base font-bold no-focus placeholder:text-[#9d9d9d] placeholder:font-light placeholder:opacity-100"
-            />
-
-            <Button
-              className="btn btn-primary mt-4 w-full"
-              onClick={handleContinue}
-            >
-              Continue
-            </Button>
-          </div>
-        </div>
-      ) : (
-        <div className="h-[475px] max-w-[500px] w-full">
-          <iframe
-            src={checkoutUrl}
-            title="Donation Checkout"
-            className="w-full h-full rounded-md border"
+      <div className="max-w-[450px] mx-auto w-full">
+        <div className="glasscard p-5 rounded-md border border-gray-100 shadow-md">
+          <h2 className="text-xl font-bold text-center mb-8">
+            Enter Donation Amount
+          </h2>
+          <Input
+            type="number"
+            min="5"
+            placeholder="Enter amount (minimum GH₵5)"
+            value={amount}
+            onChange={(e) => setAmount(e.target.value)}
+            className="w-full appearance-none rounded-md px-4 py-6 text-base font-bold no-focus placeholder:text-[#9d9d9d] placeholder:font-light placeholder:opacity-100"
           />
+
+          <Button
+            className="btn btn-primary mt-4 w-full"
+            onClick={handleContinue}
+          >
+            Continue
+          </Button>
         </div>
-      )}
+      </div>
     </div>
   );
 };
