@@ -26,10 +26,11 @@ const Donate = () => {
         body: JSON.stringify({
           totalAmount,
           description: "Donation to Abi Legacy Foundation",
-          callbackUrl: `${baseUrl}/api/hubtel-callback`,
+          callbackUrl:
+            "https://webhook.site/#!/view/a7f24d98-a1b8-46aa-a7d8-5f6f57352917",
           returnUrl: `${baseUrl}`,
           cancellationUrl: `${baseUrl}/donate`,
-          merchantAccountNumber: "11684",
+          merchantAccountNumber: "2029128",
           clientReference: `Abrantie-${Date.now()}`,
         }),
       });
