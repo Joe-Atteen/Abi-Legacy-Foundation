@@ -89,7 +89,7 @@ const Work = () => {
           >
             <div className="relative z-1 my-container text-white px-4 xl:px-10 py-10">
               <div className="text-center max-w-[800px] mx-auto flex flex-col items-center">
-                <p className="xl:text-xl max-w-[600px] mx-auto uppercase tracking-widest">
+                <p className="xl:text-xl max-w-[200px] mx-auto uppercase tracking-widest">
                   {activity.text}
                 </p>
                 <div className="flex justify-center items-center w-[110px] h-[110px] border-white border-2 rounded-full mt-4">
