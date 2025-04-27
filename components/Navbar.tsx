@@ -78,38 +78,53 @@ const Navbar = () => {
         </div>
 
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4 animate-fade-in">
+          <div className="md:hidden mt-[5px] pb-4 animate-fade-in fixed w-full bg-white shadow-lg left-0 right-0 p-4">
             <div className="flex flex-col space-y-4">
               <a
-                href="#about"
-                className="text-gray-700 hover:text-political-navy font-medium"
-                onClick={toggleMenu}
+              href="#about"
+              className="text-gray-700 hover:text-political-navy font-medium"
+              onClick={() => {
+                toggleMenu();
+              }}
               >
-                About
+              About
               </a>
               <a
-                href="#issues"
-                className="text-gray-700 hover:text-political-navy font-medium"
-                onClick={toggleMenu}
+              href="#issues"
+              className="text-gray-700 hover:text-political-navy font-medium"
+              onClick={() => {
+                toggleMenu();
+              }}
               >
-                Issues
+              Issues
               </a>
               <a
-                href="#get-involved"
-                className="text-gray-700 hover:text-political-navy font-medium"
-                onClick={toggleMenu}
+              href="#get-involved"
+              className="text-gray-700 hover:text-political-navy font-medium"
+              onClick={() => {
+                toggleMenu();
+              }}
               >
-                Join Us
+              Join Us
               </a>
               <a
-                href="#news"
-                className="text-gray-700 hover:text-political-navy font-medium"
-                onClick={toggleMenu}
+              href="#news"
+              className="text-gray-700 hover:text-political-navy font-medium"
+              onClick={() => {
+                toggleMenu();
+              }}
               >
-                Contact Us
+              Contact Us
               </a>
               <Link href="/donate">
-                <Button className="btn btn-primary">Donate</Button>
+              <Button
+                className="btn btn-primary w-full"
+                onClick={() => {
+                toggleMenu();
+                }}
+              >
+                Donate
+              </Button>
               </Link>
             </div>
           </div>
