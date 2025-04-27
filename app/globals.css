@@ -220,7 +220,7 @@ button span {
 }
 
 .donate {
-  min-height: calc(100dvh - 80px);
+  min-height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
