@@ -1,19 +1,25 @@
-import { Component } from "@/components/Carousel";
 import Summary from "@/components/Summary";
-import About from "@/components/About";
-import Founder from "@/components/Founder";
+import Founder from "@/components/Founder-alt";
 import Activities from "@/components/Activities-CTA";
 import News from "@/components/News";
+import Video from "@/components/Video";
+import Work from "@/components/Work";
+import Mission from "@/components/Mission";
 
 export default function Home() {
   return (
     <div>
-      <div className="container mx-auto px-0 md:px-4 py-0 sm:py-8">
-        <Component />
+      <Video />
+      <div>
+        <Work />
       </div>
       <div className="container mx-auto">
         <Summary />
-        <About />
+      </div>
+      <div className="">
+       <Mission />
+      </div>
+      <div className="container mx-auto">
         <Founder />
       </div>
       <Activities />

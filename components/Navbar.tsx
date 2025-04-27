@@ -36,27 +36,27 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-8">
             <a
               href="#about"
-              className="text-gray-700 hover:text-political-navy font-medium"
+              className="font-medium hover:text-[#0057a5]"
             >
               About
             </a>
             <a
               href="#issues"
-              className="text-gray-700 hover:text-political-navy font-medium"
+              className="font-medium hover:text-[#0057a5]"
             >
               Activities
             </a>
             <a
               href="#get-involved"
-              className="text-gray-700 hover:text-political-navy font-medium"
+              className="font-medium hover:text-[#0057a5]"
             >
-              Get Involved
+              Join Us
             </a>
             <a
               href="#news"
-              className="text-gray-700 hover:text-political-navy font-medium"
+              className="font-medium hover:text-[#0057a5]"
             >
-              News
+              Contact Us
             </a>
           </div>
 
@@ -99,14 +99,14 @@ const Navbar = () => {
                 className="text-gray-700 hover:text-political-navy font-medium"
                 onClick={toggleMenu}
               >
-                Get Involved
+                Join Us
               </a>
               <a
                 href="#news"
                 className="text-gray-700 hover:text-political-navy font-medium"
                 onClick={toggleMenu}
               >
-                News
+                Contact Us
               </a>
               <Link href="/donate">
                 <Button className="btn btn-primary">Donate</Button>

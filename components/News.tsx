@@ -47,7 +47,7 @@ const News = () => {
         <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-primary mb-4 leading-tight text-center max-w-[800px] mx-auto">
           News & Updates
         </h2>
-        <p className="text-gray-600 md:text-lg text-center max-w-[700px] mx-auto">
+        <p className="text-gray-600 md:text-2xl font-semibold text-center max-w-[700px] mx-auto">
           Stay informed about the latest developments in our charity work and
           how you can get involved.
         </p>

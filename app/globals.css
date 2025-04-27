@@ -127,11 +127,15 @@ body {
     @apply !px-10 !py-6 !cursor-pointer;
   }
   .btn-primary {
-    @apply !bg-[#0057a5] text-white uppercase hover:!bg-[#0047a5d2] cursor-pointer rounded-lg;
+    @apply !bg-[#0057a5] text-white uppercase hover:!bg-[#0047a5d2] cursor-pointer rounded-lg !font-bold;
   }
 
   .text-primary {
     @apply !text-[#0057a5];
+  }
+
+  .bg-primary {
+    @apply !bg-[#0057a5];
   }
 }
 
@@ -163,15 +167,50 @@ button span {
   background-position: center;
   background-repeat: no-repeat;
 }
+.activities1-bg {
+  background: url(/image-15.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.activities2-bg {
+  background: url(/image-13.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.activities3-bg {
+  background: url(/image-7.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.activities4-bg {
+  background: url(/image-12.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.activities5-bg {
+  background: url(/image-14.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-.activities-bg::before {
+.activities-bg::before,
+.activities1-bg::before,
+.activities2-bg::before,
+.activities3-bg::before,
+.activities4-bg::before,
+.activities5-bg::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .glass-card {
@@ -187,4 +226,15 @@ button span {
   align-items: center;
   flex-direction: column;
   gap: 20px;
+}
+
+.value::after {
+  position: absolute;
+  content: "";
+  background: white;
+  width: 50%;
+  height: 1px;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
 }
