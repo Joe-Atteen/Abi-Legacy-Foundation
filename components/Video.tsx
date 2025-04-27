@@ -26,7 +26,7 @@ const Video = () => {
   };
 
   return (
-    <div className="h-[400px] md:h-[600px] lg:h-[calc(100dvh-90px)] w-full relative overflow-hidden">
+    <div className="h-[400px] md:h-[600px] lg:h-[calc(100dvh-80px)] w-full relative overflow-hidden">
       <video
         ref={videoRef}
         src="/hero-vid.mov"

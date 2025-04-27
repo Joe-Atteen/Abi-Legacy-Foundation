@@ -2,6 +2,13 @@
 
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
+import {
+  FaBroadcastTower,
+  FaBook,
+  FaSchool,
+  FaUsers,
+  FaHeartbeat,
+} from "react-icons/fa"; 
 
 const container = {
   hidden: { opacity: 0 },
@@ -18,6 +25,34 @@ const item = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
+
+const activities = [
+  {
+    bgClass: "activities1-bg",
+    icon: <FaBroadcastTower size={40} className="mx-auto" />,
+    text: "Media-based community sensitization",
+  },
+  {
+    bgClass: "activities2-bg",
+    icon: <FaBook size={40} className="mx-auto" />,
+    text: "Community-based education",
+  },
+  {
+    bgClass: "activities3-bg",
+    icon: <FaSchool size={40} className="mx-auto" />,
+    text: "Second cycle schools awareness",
+  },
+  {
+    bgClass: "activities4-bg",
+    icon: <FaUsers size={40} className="mx-auto" />,
+    text: "Youth empowerment programs",
+  },
+  {
+    bgClass: "activities5-bg",
+    icon: <FaHeartbeat size={40} className="mx-auto" />,
+    text: "Community-based health programs",
+  },
+];
 
 const Work = () => {
   return (
@@ -46,68 +81,31 @@ const Work = () => {
         whileInView="show"
         viewport={{ once: true, amount: 0.3 }}
       >
-        <motion.div
-          className="flex justify-center items-center w-full activities1-bg relative h-full md:h-[600px] border border-white md:hover:w-[120%] transition-all duration-300 ease-in-out"
-          variants={item}
-        >
-          <div className="relative z-1 my-container text-white px-4 xl:px-10 py-10">
-            <div className="text-center max-w-[800px] mx-auto">
-              <p className="xl:text-xl max-w-[600px] mx-auto uppercase">
-                Media-based community sensitization
-              </p>
+        {activities.map((activity, index) => (
+          <motion.div
+            key={index}
+            className={`flex justify-center items-center w-full ${activity.bgClass} relative h-full md:h-[600px] border border-white md:hover:w-[120%] transition-all duration-300 ease-in-out`}
+            variants={item}
+          >
+            <div className="relative z-1 my-container text-white px-4 xl:px-10 py-10">
+              <div className="text-center max-w-[800px] mx-auto flex flex-col items-center">
+                <p className="xl:text-xl max-w-[600px] mx-auto uppercase tracking-widest">
+                  {activity.text}
+                </p>
+                <div className="flex justify-center items-center w-[110px] h-[110px] border-white border-2 rounded-full mt-4">
+                  <div className="flex justify-center items-center w-[100px] h-[100px] border-white border-2 rounded-full p-4">
+                    {activity.icon}
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </motion.div>
-        <motion.div
-          className="flex justify-center items-center w-full activities2-bg relative h-full md:h-[600px] border border-white md:hover:w-[120%] transition-all duration-300 ease-in-out"
-          variants={item}
-        >
-          <div className="relative z-1 my-container text-white px-4 xl:px-10 py-10">
-            <div className="text-center max-w-[800px] mx-auto">
-              <p className="xl:text-xl max-w-[600px] mx-auto uppercase">
-                Community-based education
-              </p>
-            </div>
-          </div>
-        </motion.div>
-        <motion.div
-          className="flex justify-center items-center w-full activities3-bg relative h-full md:h-[600px] border border-white md:hover:w-[120%] transition-all duration-300 ease-in-out"
-          variants={item}
-        >
-          <div className="relative z-1 my-container text-white px-4 xl:px-10 py-10">
-            <div className="text-center max-w-[800px] mx-auto">
-              <p className="xl:text-xl max-w-[600px] mx-auto uppercase">
-                Second cycle schools awareness
-              </p>
-            </div>
-          </div>
-        </motion.div>
-        <motion.div
-          className="flex justify-center items-center w-full activities4-bg relative h-full md:h-[600px] border border-white md:hover:w-[120%] transition-all duration-300 ease-in-out"
-          variants={item}
-        >
-          <div className="relative z-1 my-container text-white px-4 xl:px-10 py-10">
-            <div className="text-center max-w-[800px] mx-auto">
-              <p className="xl:text-xl max-w-[600px] mx-auto uppercase">
-                Youth empowerment programs
-              </p>
-            </div>
-          </div>
-        </motion.div>
-        <motion.div
-          className="flex justify-center items-center w-full activities5-bg relative h-full md:h-[600px] border border-white md:hover:w-[120%] transition-all duration-300 ease-in-out"
-          variants={item}
-        >
-          <div className="relative z-1 my-container text-white px-4 xl:px-10 py-10">
-            <div className="text-center max-w-[800px] mx-auto">
-              <p className="xl:text-xl max-w-[600px] mx-auto uppercase">
-                Community-based health programs
-              </p>
-            </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        ))}
       </motion.div>
-      <motion.div variants={item} className="absolute bottom-[30px] left-1/2 transform -translate-x-1/2">
+      <motion.div
+        variants={item}
+        className="md:absolute md:bottom-[30px] md:left-1/2 md:transform md:-translate-x-1/2 text-center mt-5 pb-10 border-b md:border-b-0"
+      >
         <Button className="btn btn-primary">View all</Button>
       </motion.div>
     </div>

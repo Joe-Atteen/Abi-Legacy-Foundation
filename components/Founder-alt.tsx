@@ -46,12 +46,11 @@ const Founder = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="flex flex-col justify-center"
       >
-        <h3 className="text-xl md:text-2xl font-bold mb-4 text-primary">
-          Meet Abigail Akwambea Elorm Yaa Mensah
+        <h3 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-4 text-primary">
+          Meet Abigail Elorm Mensah
         </h3>
         <p className="text-base lg:text-lg mb-5">
-          Hi, I am the founder of
-          Legacy Foundation.
+          Hi, I am the founder of Legacy Foundation.
         </p>
         <p className="text-base lg:text-lg font-semibold mb-5">
           I&apos;m a dedicated social entrepreneur driven by a passion to
