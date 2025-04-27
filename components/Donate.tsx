@@ -55,7 +55,8 @@ const Donate = () => {
           Enter Donation Amount
         </h2>
         <Input
-          type="number"
+          type="text"
+          inputMode="numeric"
           min="5"
           placeholder="Enter amount (minimum GH₵5)"
           value={amount}

@@ -29,7 +29,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>
+      <body className="overfloew-x-hidden">
         <Navbar />
         {children}
         <Footer />
