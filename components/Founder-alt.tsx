@@ -9,13 +9,13 @@ const Founder = () => {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   const imageVariants = {
-    hidden: { opacity: 0, x: 80 },
-    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, y: 150 },
+    visible: { opacity: 1, y: 0 },
   };
 
   const textVariants = {
-    hidden: { opacity: 0, x: -80 },
-    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, y: -150 },
+    visible: { opacity: 1, y: 0 },
   };
 
   return (

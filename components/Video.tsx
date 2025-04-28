@@ -1,62 +1,53 @@
 "use client";
-import React, { useRef, useState } from "react";
-import { FaPlay, FaPause, FaVolumeMute, FaVolumeUp } from "react-icons/fa";
+import React from "react";
+import { motion } from "framer-motion";
+import { Button } from "./ui/button";
 
 const Video = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(true);
-
-  const togglePlayPause = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
-  const handleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !videoRef.current.muted;
-      setIsMuted(videoRef.current.muted);
-    }
+  const fadeInVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
   };
 
   return (
-    <div className="h-[400px] md:h-[600px] lg:h-dvh w-full relative overflow-hidden">
-      <video
-        ref={videoRef}
-        src="/hero-vid.mov"
-        autoPlay
-        loop
-        muted={isMuted}
-        className="w-full h-full object-cover"
-      >
-        <track
-          src="/captions.vtt"
-          kind="subtitles"
-          srcLang="en"
-          label="English"
-          default
-        />
-        Your browser does not support the video tag.
-      </video>
-      <div className="absolute bottom-5 right-5 flex gap-4">
-        <button
-          onClick={togglePlayPause}
-          className="bg-white text-black px-4 py-2 rounded flex items-center justify-center hidden"
-        >
-          {isPlaying ? <FaPause size={20} /> : <FaPlay size={20} />}
-        </button>
-        <button
-          onClick={handleMute}
-          className="bg-white text-black px-4 py-2 rounded flex items-center justify-center"
-        >
-          {isMuted ? <FaVolumeMute size={20} /> : <FaVolumeUp size={20} />}
-        </button>
+    <div className="h-full w-full relative overflow-hidden hero-bg">
+      <div className="container mx-auto px-4 py-10 md:py-20 text-white">
+        <div className="z-30 relative">
+          <div className="text-center pt-40 pb-32">
+            <motion.h1
+              className="text-3xl md:text-4xl lg:text-7xl font-bold"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              variants={fadeInVariants}
+            >
+              We are <br /> Abi Legacy Foundation
+            </motion.h1>
+            <motion.div
+              className="text-center max-w-[900px] mx-auto mt-4 md:mt-8 mb-6 md:mb-10"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              variants={fadeInVariants}
+            >
+              <p className="text-lg md:text-2xl">
+                Our singular vision is to empower vulnerable populations by
+                providing them with the resources, opportunities, and support
+                necessary to lead fulfilling
+                lives.
+              </p>
+            </motion.div>
+            <motion.div
+              className="text-center max-w-[700px] mx-auto"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              variants={fadeInVariants}
+            >
+              <Button className="btn btn-primary">Join Us</Button>
+            </motion.div>
+          </div>
+        </div>
       </div>
     </div>
   );
