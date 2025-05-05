@@ -1,11 +1,12 @@
 import {
   FaFacebookF,
   FaInstagram,
-  FaTiktok,
   FaLinkedinIn,
+  FaWhatsapp,
 } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -23,10 +24,27 @@ const Footer = () => {
 
         <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6">
           {[
-            { href: "#", icon: <FaFacebookF />, alt: "Facebook" },
-            { href: "#", icon: <FaInstagram />, alt: "Instagram" },
-            { href: "#", icon: <FaTiktok />, alt: "TikTok" },
+            {
+              href: "https://www.facebook.com/profile.php?id=100068861689001&mibextid=wwXIfr&mibextid=wwXIfr",
+              icon: <FaFacebookF />,
+              alt: "Facebook",
+            },
+            {
+              href: "https://www.instagram.com/abilegacyfoundation?igsh=MXZmeWt3dXlibmJ4MA==",
+              icon: <FaInstagram />,
+              alt: "Instagram",
+            },
+            {
+              href: "https://x.com/legacy_abi?t=oYEoTMfOxsmjSGNzIWeHMQ&s=08",
+              icon: <FaXTwitter />,
+              alt: "X",
+            },
             { href: "#", icon: <FaLinkedinIn />, alt: "LinkedIn" },
+            {
+              href: "https://wa.me/233558764287",
+              icon: <FaWhatsapp />,
+              alt: "WhatsApp",
+            },
           ].map((item) => (
             <Link
               href={item.href}

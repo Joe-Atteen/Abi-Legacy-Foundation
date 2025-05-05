@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 const Video = () => {
   const fadeInVariants = {
@@ -33,8 +34,7 @@ const Video = () => {
               <p className="text-lg md:text-2xl">
                 Our singular vision is to empower vulnerable populations by
                 providing them with the resources, opportunities, and support
-                necessary to lead fulfilling
-                lives.
+                necessary to lead fulfilling lives.
               </p>
             </motion.div>
             <motion.div
@@ -44,7 +44,9 @@ const Video = () => {
               viewport={{ once: true, amount: 0.5 }}
               variants={fadeInVariants}
             >
-              <Button className="btn btn-primary">Join Us</Button>
+              <Link href="/volunteer">
+                <Button className="btn btn-primary">Join Us</Button>
+              </Link>
             </motion.div>
           </div>
         </div>

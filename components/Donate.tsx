@@ -40,11 +40,15 @@ const Donate = () => {
       if (response.ok && data?.data?.checkoutUrl) {
         window.location.href = data.data.checkoutUrl;
       } else {
-        toast.error("Failed to initiate donation.");
+        toast.error("Failed to initiate donation.", {
+          style: { backgroundColor: "#f44336", color: "#fff" },
+        });
       }
     } catch (error) {
       console.error("Error:", error);
-      toast.error("Something went wrong. Please try again.");
+      toast.error("Something went wrong. Please try again.", {
+        style: { backgroundColor: "#f44336", color: "#fff" },
+      });
     }
   };
 

@@ -9,6 +9,7 @@ import {
   FaUsers,
   FaHeartbeat,
 } from "react-icons/fa"; 
+import Link from "next/link";
 
 const container = {
   hidden: { opacity: 0 },
@@ -106,7 +107,9 @@ const Work = () => {
         variants={item}
         className="md:absolute md:bottom-[30px] md:left-1/2 md:transform md:-translate-x-1/2 text-center mt-5 pb-10 border-b md:border-b-0"
       >
-        <Button className="btn btn-primary">View all</Button>
+        <Link href="gallery">
+          <Button className="btn btn-primary">View all</Button>
+        </Link>
       </motion.div>
     </div>
   );

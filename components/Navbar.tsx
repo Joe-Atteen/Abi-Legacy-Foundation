@@ -40,24 +40,24 @@ const Navbar = () => {
             >
               About
             </a>
-            <a
-              href="#issues"
+            <Link
+              href="/gallery"
               className="font-medium hover:text-[#0057a5]"
             >
               Activities
-            </a>
-            <a
-              href="#get-involved"
+            </Link>
+            <Link
+              href="/volunteer"
               className="font-medium hover:text-[#0057a5]"
             >
               Join Us
-            </a>
-            <a
-              href="#news"
+            </Link>
+            <Link
+              href="/contact"
               className="font-medium hover:text-[#0057a5]"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
 
           <div className="hidden md:block">
