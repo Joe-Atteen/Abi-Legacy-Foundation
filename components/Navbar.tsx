@@ -34,12 +34,12 @@ const Navbar = () => {
           </Link>
 
           <div className="hidden md:flex space-x-8">
-            <a
-              href="#about"
+            <Link
+              href="/about"
               className="font-medium hover:text-[#0057a5]"
             >
               About
-            </a>
+            </Link>
             <Link
               href="/gallery"
               className="font-medium hover:text-[#0057a5]"
