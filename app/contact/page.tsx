@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import Message from "@/components/Message";
 import Socials from "@/components/Socials";
@@ -8,13 +7,9 @@ const Page = () => {
   return (
     <div className="container mx-auto">
       <div className="max-w-[1200px] mx-auto py-10 md:py-20 px-4">
-        <Image
-          src="/contact-banner.webp"
-          width={450}
-          height={0}
-          alt="logo"
-          className="mx-auto mt-20 mb-12"
-        />
+        <h1 className="text-3xl font-bold text-center mb-16 pt-20">
+          Reach Out to Us
+        </h1>
         <div className="flex flex-col justify-center items-center md:flex-row md:justify-between md:items-start gap-10">
           <div>
             <div className="flex flex-col gap-8">
