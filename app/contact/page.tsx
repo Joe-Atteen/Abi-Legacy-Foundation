@@ -40,7 +40,7 @@ const Page = () => {
                   <FaMapMarkerAlt size={20} className="text-[#0057a5]" />
                 </div>
                 <span className="sm:text-lg font-medium">
-                  123 Main Street, City, Country
+                  Tantra Hills, Accra Ghana
                 </span>
               </div>
             </div>

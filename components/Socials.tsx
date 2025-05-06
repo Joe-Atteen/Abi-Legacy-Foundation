@@ -26,7 +26,11 @@ const Socials = () => {
           icon: <FaXTwitter />,
           alt: "X",
         },
-        { href: "#", icon: <FaLinkedinIn />, alt: "LinkedIn" },
+        {
+          href: "https://www.linkedin.com/in/abi-legacy-foundation-08a982363?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+          icon: <FaLinkedinIn />,
+          alt: "LinkedIn",
+        },
         {
           href: "https://wa.me/233558764287",
           icon: <FaWhatsapp />,
