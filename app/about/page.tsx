@@ -21,15 +21,15 @@ const Page = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="flex flex-col gap-5 md:flex-row justify-between items-center pt-[150px] md:pt-36 xl:pt-40 bg-[#f5f5f5] px-4 lg:pe-0 lg:ps-20"
+        className="flex flex-col gap-10 md:flex-row justify-between items-center pt-[150px] md:pt-36 xl:pt-40 bg-gradient-to-r from-[#f1f8fe] to-transparent px-4 lg:pe-0 lg:ps-20"
       >
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="md:ms-auto w-[calc(100%-2rem)] lg:w-[calc(100%-1rem)] max-w-[1000px]"
+          className="md:ms-auto w-[calc(100%-2rem)] lg:w-[calc(100%-1rem)] max-w-[900px]"
         >
-          <p className="relative text-[#439b24] ps-0 md:ps-10 xl:ps-16 before:content-['“'] before:text-7xl md:before:text-8xl  xl:before:text-9xl before:absolute before:left-0 before:-top-10 before:text-gray-400 text-xl md:text-2xl xl:text-4xl xl:leading-12 font-medium">
+          <p className="relative ps-0 md:ps-10 xl:ps-16 before:content-['“'] before:text-7xl md:before:text-8xl  xl:before:text-9xl before:absolute before:left-0 before:-top-10 before:text-gray-400 text-xl md:text-2xl xl:text-3xl xl:leading-10 font-medium">
             I believe every individual deserves equal opportunities to thrive.
             I&apos;m committed to empowering girl children, widows, and orphans
             through education, economic empowerment, and social support.
@@ -107,7 +107,7 @@ const Page = () => {
               volunteerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
             }
             transition={{ duration: 1, delay: 1 }}
-            className="max-w-[1300px] mx-auto overflow-hidden border-2 rounded-3xl shadow-lg flex"
+            className="max-w-[1300px] mx-auto overflow-hidden border-2 rounded-3xl shadow-lg flex flex-col lg:flex-row"
           >
             <Image
               src="/image-6.webp"
@@ -116,7 +116,7 @@ const Page = () => {
               alt="founder"
               className="object-cover w-full h-full"
             />
-            <div className="p-6 lg:p-12 flex flex-col justify-center bg-white">
+            <div className="p-6 lg:p-12 flex flex-col justify-center bg-white text-center lg:text-left">
               <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 text-[#0057a5]">
                 Be A Volunteer & Help Us Make A Difference
               </h3>

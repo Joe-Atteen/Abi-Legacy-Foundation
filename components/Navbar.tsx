@@ -80,42 +80,42 @@ const Navbar = () => {
         {isOpen && (
           <div className="md:hidden mt-[5px] pb-4 animate-fade-in fixed w-full bg-white shadow-lg left-0 right-0 p-4">
             <div className="flex flex-col space-y-4">
-              <a
-              href="#about"
+              <Link
+              href="/about"
               className="text-gray-700 hover:text-political-navy font-medium"
               onClick={() => {
                 toggleMenu();
               }}
               >
               About
-              </a>
-              <a
-              href="#issues"
+              </Link>
+              <Link
+              href="/gallery"
               className="text-gray-700 hover:text-political-navy font-medium"
               onClick={() => {
                 toggleMenu();
               }}
               >
-              Issues
-              </a>
-              <a
-              href="#get-involved"
+              Activities
+              </Link>
+              <Link
+              href="/volunteer"
               className="text-gray-700 hover:text-political-navy font-medium"
               onClick={() => {
                 toggleMenu();
               }}
               >
               Join Us
-              </a>
-              <a
-              href="#news"
+              </Link>
+              <Link
+              href="contact"
               className="text-gray-700 hover:text-political-navy font-medium"
               onClick={() => {
                 toggleMenu();
               }}
               >
               Contact Us
-              </a>
+              </Link>
               <Link href="/donate">
               <Button
                 className="btn btn-primary w-full"

@@ -10,7 +10,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#052453] text-white py-20">
+    <footer className="bg-[#052453] text-white pt-20 pb-8">
       <div className="max-w-7xl mx-auto px-4 flex flex-col items-center space-y-6">
         <div>
           <Image
@@ -61,11 +61,21 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Copyright */}
-        <p className="text-sm text-center">
-          Abi Legacy Foundation 2025. All rights reserved.
+        <p className="text-sm text-center pb-14">
+          © Abi Legacy Foundation 2025. All rights reserved.
         </p>
       </div>
+      <p className="text-sm text-center">
+        Powered by{" "}
+        <Link
+          href="https://www.coreconnectghana.com/"
+          className="text-[#439b24] hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          CoreConnect Limited
+        </Link>
+      </p>
     </footer>
   );
 };

@@ -54,12 +54,12 @@ export default function HeroStatsSection() {
           },
           {
             icon: "🏅",
-            value: "5+",
+            value: "7+",
             label: "Years of experience",
           },
           {
             icon: "🟠",
-            value: "600+",
+            value: "200+",
             label: "Charity campaigns",
           },
           {
