@@ -21,7 +21,7 @@ const Page = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="flex flex-col md:flex-row justify-between items-center pt-[150px] md:pt-24 xl:pt-14 bg-[#f5f5f5] px-4 lg:pe-0 lg:ps-20"
+        className="flex flex-col gap-5 md:flex-row justify-between items-center pt-[150px] md:pt-36 xl:pt-40 bg-[#f5f5f5] px-4 lg:pe-0 lg:ps-20"
       >
         <motion.div
           initial={{ opacity: 0, x: -50 }}
