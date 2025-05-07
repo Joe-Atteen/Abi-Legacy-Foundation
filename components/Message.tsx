@@ -36,12 +36,12 @@ const Message = () => {
       });
 
       if (response.ok) {
-        toast.success("Your application has been submitted!", {
+        toast.success("Your message has been submitted successfully!", {
           style: { backgroundColor: "#4caf50", color: "#fff" }
         });
         setFormData({ name: "", email: "", phone: "", message: "" });
       } else {
-        toast.error("Failed to send your application. Please try again.", {
+        toast.error("Failed to send your message. Please try again.", {
           style: { backgroundColor: "#f44336", color: "#fff" },
         });
       }
