@@ -50,7 +50,7 @@ const Founder = () => {
           Meet Abigail Elorm Mensah
         </h3>
         <p className="text-base lg:text-lg mb-5">
-          Hi, I am the founder of Legacy Foundation.
+          Hi, I am the founder of Abi Legacy Foundation.
         </p>
         <p className="text-base lg:text-lg font-semibold mb-5">
           I&apos;m a dedicated social entrepreneur driven by a passion to
