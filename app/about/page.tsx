@@ -33,7 +33,7 @@ const Page = () => {
           <h1 className="text-3xl md:text-4xl xl:text-7xl font-bold mb-4 leading-snug mx-auto text-[#0057a5] tracking-wide">
             PURPOSE
           </h1>
-          <p className="text-lg md:text-xl xl:text-2xl font-medium">
+          <p className="text-lg md:text-xl font-medium">
             I believe every individual deserves equal opportunities to thrive.
             I&apos;m committed to empowering girl children, widows, and orphans
             through education, economic empowerment, and social support.
