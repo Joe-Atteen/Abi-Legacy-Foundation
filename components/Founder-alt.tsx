@@ -62,9 +62,9 @@ const Founder = () => {
           <span className="font-semibold mb-5">Experience:</span>
           <br />
           <ul>
-            <li>* Founder, Legacy Foundation</li>
+            <li>* Founder, Abi Legacy Foundation</li>
             <li>
-              * 5 years of experience in social entrepreneurship and community
+              * 7+ years of experience in social entrepreneurship and community
               development
             </li>
           </ul>
