@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 
+
 const Page = () => {
   const missionRef = useRef(null);
   const missionInView = useInView(missionRef, { once: true });
@@ -91,7 +92,11 @@ const Page = () => {
         className="py-10 md:py-20 container mx-auto px-4"
       >
         <div className="max-w-[1000px] mx-auto rounded-3xl overflow-hidden border-2">
-          <video controls className="w-full " src="/about.mp4">
+          <video
+            controls
+            className="w-full "
+            src="https://res.cloudinary.com/dmosnkyn0/video/upload/v1746898152/about_kylmwt.mp4"
+          >
             Your browser does not support the video tag.
           </video>
         </div>
