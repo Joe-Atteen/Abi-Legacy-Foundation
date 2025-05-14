@@ -10,7 +10,7 @@ const Donate = () => {
   const handleContinue = async () => {
     const totalAmount = parseFloat(amount);
 
-    if (isNaN(totalAmount) || totalAmount < 5) {
+    if (isNaN(totalAmount) || totalAmount < 1) {
       toast.error("Please enter a valid amount not less than GH₵5");
       return;
     }
@@ -28,7 +28,7 @@ const Donate = () => {
           description: "Donation to Abi Legacy Foundation",
           callbackUrl:
             "https://webhook.site/#!/view/a7f24d98-a1b8-46aa-a7d8-5f6f57352917",
-          returnUrl: `${baseUrl}`,
+          returnUrl: `${baseUrl}/donate`,
           cancellationUrl: `${baseUrl}/donate`,
           merchantAccountNumber: "2029128",
           clientReference: `Abrantie-${Date.now()}`,

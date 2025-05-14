@@ -28,12 +28,12 @@ const Page = () => {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="md:ms-auto w-[calc(100%-2rem)] lg:w-[calc(100%-1rem)] max-w-[900px]"
+          className="md:ms-auto w-[calc(100%-2rem)] lg:w-[calc(100%-1rem)] max-w-[900px] md:-mt-20 lg:-mt-42"
         >
-          <h1 className="text-3xl md:text-4xl xl:text-7xl font-bold mb-4 leading-snug mx-auto text-[#0057a5] tracking-wide">
+          <h1 className="text-3xl md:text-4xl xl:text-6xl font-extrabold mb-4 leading-snug mx-auto text-[#0057a5] tracking-wide">
             PURPOSE
           </h1>
-          <p className="text-lg md:text-xl font-medium">
+          <p className="text-lg md:text-xl font-medium max-w-[700px]">
             I believe every individual deserves equal opportunities to thrive.
             I&apos;m committed to empowering girl children, widows, and orphans
             through education, economic empowerment, and social support.
