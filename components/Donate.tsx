@@ -10,7 +10,7 @@ const Donate = () => {
   const handleContinue = async () => {
     const totalAmount = parseFloat(amount);
 
-    if (isNaN(totalAmount) || totalAmount < 1) {
+    if (isNaN(totalAmount) || totalAmount < 5) {
       toast.error("Please enter a valid amount not less than GH₵5");
       return;
     }
